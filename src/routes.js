@@ -26,6 +26,7 @@ import UserPage from "views/User.jsx";
 import UpgradeToPro from "views/Upgrade.jsx";
 import PathFinder from "views/PathFinderVisualizer/PathFinder.jsx";
 import ArrayList from "views/ArrayList/ArrayList.jsx";
+import LinkedList from "views/LinkedList/LinkedList.jsx";
 
 var routes = [
   {
@@ -45,8 +46,15 @@ var routes = [
   {
     path: "/array-list",
     name: "Array List",
-    icon: "nc-tile-56",
+    // icon: "nc-tile-56",
     component: ArrayList,
+    layout: "/admin"
+  },
+  {
+    path: "/linked-list",
+    name: "Linked List",
+    // icon: "nc-tile-56",
+    component: LinkedList,
     layout: "/admin"
   },
   {
