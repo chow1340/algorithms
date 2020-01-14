@@ -57,18 +57,12 @@ class Sidebar extends React.Component {
         data-active-color={this.props.activeColor}
       >
         <div className="logo">
-          <a
-            className="simple-text logo-mini"
-          >
+          <a className="simple-text logo-mini">
             <div className="logo-img">
               <img src={logo} alt="react-logo" />
             </div>
           </a>
-          <a
-            className="simple-text logo-normal"
-          >
-            Algo Explorer
-          </a>
+          <a className="simple-text logo-normal">DS Explorer</a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>
           <Nav>
