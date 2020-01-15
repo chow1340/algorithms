@@ -1,0 +1,12 @@
+#popButton {
+  display: inline;
+}
+
+#pushButton {
+  display: inline;
+}
+
+#stack {
+  height: 200px;
+  width: 120px;
+}

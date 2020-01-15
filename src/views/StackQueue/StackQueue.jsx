@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import Highlight from "react-highlight";
+import "./StackQueue.css";
+import stack from "./stack.png";
 
 class StackQueue extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stack: [1, 2, 3, 4, 5]
+      stack: [1, 2, 3, 4, 5],
+      queue: [1, 2, 3, 4, 5]
     };
     this.addStack = this.addStack.bind(this);
+    this.removeStack = this.removeStack.bind(this);
+    this.enqueue = this.enqueue.bind(this);
+    this.dequeue = this.dequeue.bind(this);
   }
 
   addStack(e) {
@@ -29,10 +35,29 @@ class StackQueue extends Component {
       stack: currentArray
     });
   }
+
+  enqueue(e) {
+    e.preventDefault();
+    const value = document.getElementById("enqueueValue").value;
+    this.state.queue.push(value);
+
+    this.setState({
+      queue: this.state.queue
+    });
+  }
+
+  dequeue(e) {
+    e.preventDefault();
+    this.state.queue.shift();
+    this.setState({
+      queue: this.state.queue
+    });
+  }
   render() {
     return (
       <div className="content">
         <h1>Stack</h1>
+        <img src={stack} id="stack"></img>
         <p>
           Stack and Queues are relatively simple - they follow a LIFO (last in
           first out) rule. This means elements can only be inserted and deleted
@@ -62,12 +87,53 @@ class StackQueue extends Component {
         <Highlight>{`stack.pop() removes a value from the top`}</Highlight>
 
         <div>Stack: {this.state.stack.toString()} </div>
-        <form onSubmit={e => this.addStack(e)}>
+        <form id="pushButton" onSubmit={e => this.addStack(e)}>
           <input type="text" placeholder="Value to Push" id="pushValue"></input>
           <button className="btn">Push</button>
         </form>
-        <form onSubmit={e => this.removeStack(e)}>
+        <form id="popButton" onSubmit={e => this.removeStack(e)}>
           <button className="btn">Pop</button>
+        </form>
+        <br />
+        <br />
+        <h1>Queue</h1>
+        <p> Where stack uses the LIFO method, Queue uses the FIFO method.</p>
+        <h6>Elements of a Queue:</h6>
+        <ul>
+          <li>
+            <b>Rear</b> - Where elements are inserted from the queue
+          </li>
+          <li>
+            <b>Front</b> - Elements can only be deleted from the opposite end:
+            the front
+          </li>
+          <li>
+            <b>Enqueue</b> - The insertion of an element to the queue
+          </li>
+          <li>
+            <b>Dequeue</b> - Deletion of an element
+          </li>
+        </ul>
+        <h6>Enqueue</h6>
+        <Highlight>{`queue.push() will add to the queue`}</Highlight>
+
+        <br />
+        <h6>Dequeue</h6>
+        <Highlight>{`queue.shift() will dequeue`}</Highlight>
+
+        <br />
+        <div>Queue: {this.state.queue.toString()}</div>
+
+        <form id="pushButton" onSubmit={e => this.enqueue(e)}>
+          <input
+            type="text"
+            placeholder="Value to Queue"
+            id="enqueueValue"
+          ></input>
+          <button className="btn">enqueue</button>
+        </form>
+        <form id="popButton" onSubmit={e => this.dequeue(e)}>
+          <button className="btn">dequeue</button>
         </form>
       </div>
     );
