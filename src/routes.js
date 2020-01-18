@@ -19,31 +19,48 @@
 import Dashboard from "views/Dashboard.jsx";
 import ArrayList from "views/ArrayList/ArrayList.jsx";
 import LinkedList from "views/LinkedList/LinkedList.jsx";
-import StackQueue from "views/StackQueue/StackQueue.jsx"
+import StackQueue from "views/StackQueue/StackQueue.jsx";
+import HashTables from "views/HashTables/HashTables.jsx";
+import Graphs from "views/Graphs/graphs.jsx";
 
 var routes = [
-    {
-        path: "/home",
-        name: "Home",
-        component: Dashboard,
-        layout: "/admin"
-    }, {
-        path: "/array-list",
-        name: "Array List",
-        // icon: "nc-tile-56",
-        component: ArrayList,
-        layout: "/admin"
-    }, {
-        path: "/linked-list",
-        name: "Linked List",
-        // icon: "nc-tile-56",
-        component: LinkedList,
-        layout: "/admin"
-    }, {
-        path: '/stack-queue',
-        name: 'Stack and Queue',
-        component: StackQueue,
-        layout: '/admin'
-    }
+  {
+    path: "/home",
+    name: "Home",
+    component: Dashboard,
+    layout: "/admin"
+  },
+  {
+    path: "/array-list",
+    name: "Array List",
+    // icon: "nc-tile-56",
+    component: ArrayList,
+    layout: "/admin"
+  },
+  {
+    path: "/linked-list",
+    name: "Linked List",
+    // icon: "nc-tile-56",
+    component: LinkedList,
+    layout: "/admin"
+  },
+  {
+    path: "/stack-queue",
+    name: "Stack and Queue",
+    component: StackQueue,
+    layout: "/admin"
+  },
+  {
+    path: "/hash",
+    name: "Hash Tables",
+    component: HashTables,
+    layout: "/admin"
+  },
+  {
+    path: "/graphs",
+    name: "Graphs",
+    component: Graphs,
+    layout: "/admin"
+  }
 ];
 export default routes;

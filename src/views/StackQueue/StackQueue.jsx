@@ -57,7 +57,7 @@ class StackQueue extends Component {
     return (
       <div className="content">
         <h1>Stack</h1>
-        <img src={stack} id="stack"></img>
+        <img src={stack} id="stack" alt="stack"></img>
         <p>
           Stack and Queues are relatively simple - they follow a LIFO (last in
           first out) rule. This means elements can only be inserted and deleted
@@ -104,8 +104,7 @@ class StackQueue extends Component {
             <b>Rear</b> - Where elements are inserted from the queue
           </li>
           <li>
-            <b>Front</b> - Elements can only be deleted from the opposite end:
-            the front
+            <b>Front</b> - Elements can only be deleted from the front
           </li>
           <li>
             <b>Enqueue</b> - The insertion of an element to the queue
@@ -122,7 +121,11 @@ class StackQueue extends Component {
         <Highlight>{`queue.shift() will dequeue`}</Highlight>
 
         <br />
-        <div>Queue: {this.state.queue.toString()}</div>
+        <div>
+          Queue: <b>Front</b>
+          {this.state.queue.toString()}
+          <b>Rear</b>
+        </div>
 
         <form id="pushButton" onSubmit={e => this.enqueue(e)}>
           <input
