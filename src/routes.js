@@ -22,6 +22,7 @@ import LinkedList from "views/LinkedList/LinkedList.jsx";
 import StackQueue from "views/StackQueue/StackQueue.jsx";
 import HashTables from "views/HashTables/HashTables.jsx";
 import Graphs from "views/Graphs/graphs.jsx";
+import BinarySearch from "views/BinarySearch/BinarySearch.jsx";
 
 var routes = [
   {
@@ -60,6 +61,12 @@ var routes = [
     path: "/graphs",
     name: "Graphs",
     component: Graphs,
+    layout: "/admin"
+  },
+  {
+    path: "/binary-search",
+    name: "Binary search",
+    component: BinarySearch,
     layout: "/admin"
   }
 ];

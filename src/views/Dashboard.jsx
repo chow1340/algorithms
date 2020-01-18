@@ -38,6 +38,14 @@ class Dashboard extends React.Component {
             The purpose of this project is to track my learning curve of my
             progress of Data structure and Algorithms. It was a good way to
             practice my Javascript while honing my basic programming concepts.
+            After reading up on the basics of DS/Algorithms, I found this
+            article which had a lists of challenges:{" "}
+            <a
+              href="https://medium.com/@alimirio/before-you-start-solving-problems-on-leetcode-prep-work-9d65fc964c6f"
+              target="_blank"
+            >
+              https://medium.com/@alimirio/before-you-start-solving-problems-on-leetcode-prep-work-9d65fc964c6f
+            </a>
           </p>
           <br />
           <br />
