@@ -71,7 +71,7 @@ var routes = [
   },
   {
     path: "/sort",
-    name: "Sort",
+    name: "Quick/Merge Sort",
     component: Sort,
     layout: "/admin"
   }

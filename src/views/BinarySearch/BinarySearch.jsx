@@ -137,7 +137,7 @@ class BinarySearch extends Component {
         <Highlight>
           {`this.recursiveFunction(array, x, 0, array.length - 1)`}
         </Highlight>
-        <form onSubmit={e => this.printFunctionButton(e)}>
+        <form onSubmit={e => this.recursiveFunctionButton(e)}>
           <input
             type="number"
             id="recursiveSelect"
