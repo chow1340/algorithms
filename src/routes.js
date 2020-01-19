@@ -23,7 +23,7 @@ import StackQueue from "views/StackQueue/StackQueue.jsx";
 import HashTables from "views/HashTables/HashTables.jsx";
 import Graphs from "views/Graphs/graphs.jsx";
 import BinarySearch from "views/BinarySearch/BinarySearch.jsx";
-
+import Sort from "views/Sort/Sort.jsx";
 var routes = [
   {
     path: "/home",
@@ -67,6 +67,12 @@ var routes = [
     path: "/binary-search",
     name: "Binary search",
     component: BinarySearch,
+    layout: "/admin"
+  },
+  {
+    path: "/sort",
+    name: "Sort",
+    component: Sort,
     layout: "/admin"
   }
 ];
