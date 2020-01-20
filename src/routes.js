@@ -24,6 +24,7 @@ import HashTables from "views/HashTables/HashTables.jsx";
 import Graphs from "views/Graphs/graphs.jsx";
 import BinarySearch from "views/BinarySearch/BinarySearch.jsx";
 import Sort from "views/Sort/Sort.jsx";
+import BinaryTree from "views/BinaryTree/BinaryTree.jsx";
 var routes = [
   {
     path: "/home",
@@ -73,6 +74,12 @@ var routes = [
     path: "/sort",
     name: "Quick/Merge Sort",
     component: Sort,
+    layout: "/admin"
+  },
+  {
+    path: "/binary-tree",
+    name: "Binary Search Tree",
+    component: BinaryTree,
     layout: "/admin"
   }
 ];

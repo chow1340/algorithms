@@ -74,7 +74,7 @@ class Graphs extends Component {
     visited[startingNode] = true;
     enqueue(startingNode);
 
-    //--- loop until queue is element
+    //--- loop until queue is empty
     while (queue.length !== 0) {
       var getElementInQueue = queue.shift().toString();
       console.log(getElementInQueue);
